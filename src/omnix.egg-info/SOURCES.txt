@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/omnix.egg-info/PKG-INFO
+src/omnix.egg-info/SOURCES.txt
+src/omnix.egg-info/dependency_links.txt
+src/omnix.egg-info/requires.txt
+src/omnix.egg-info/top_level.txt
