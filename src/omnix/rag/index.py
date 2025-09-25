@@ -93,6 +93,6 @@ class Retriever:
         return out
 
 def load_default() -> Retriever:
-    root = Path(__file__).resolve().parents[2] / "data" / "docs"
+    root = Path(__file__).resolve().parents[3] / "data" / "docs"
     corpus = build_corpus(root)
     return Retriever(corpus)
