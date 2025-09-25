@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Commercial Star Schema (demo)",
+  "type": "object",
+  "properties": {
+    "fact_sales": {
+      "type": "object",
+      "properties": {
+        "date": {"type": "string", "format": "date"},
+        "hcp_id": {"type": "string"},
+        "geo_id": {"type": "string"},
+        "channel": {"type": "string"},
+        "payer_id": {"type": "string"},
+        "rx": {"type": "number"},
+        "revenue": {"type": "number"}
+      },
+      "required": ["date","hcp_id","geo_id","channel","rx"]
+    }
+  }
+}

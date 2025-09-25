@@ -1,0 +1,7 @@
+redactions:
+  pii_regex: ["\\b\\d{3}-\\d{3}-\\d{4}\\b"]
+forbidden_topics:
+  - off_label_use
+requirements:
+  - "responses must include citations when using documents"
+  - "no personal data in outputs"
