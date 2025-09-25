@@ -1,0 +1,6 @@
+payer_id,payer_name,tier
+P01,OHIP,Non-Preferred
+P02,BC MSP,Non-Preferred
+P03,PrivateB,Non-Preferred
+P04,PrivateA,Preferred
+P05,RAMQ,Non-Preferred
