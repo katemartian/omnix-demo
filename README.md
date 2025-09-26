@@ -7,9 +7,9 @@
 
 - **GenAI & Agentic AI:** Planner routes to two agents (Talk-to-SQL and Docs-RAG) with lightweight orchestration.
 - **Commercial use-cases:** 
-1) Omnichannel trends and segment under/over-performance.  
-2) Market access summary from payer policy + label docs with **citations**.  
-3) Talk-to-data: natural-language to SQL over a small commercial star schema.
+  1) Omnichannel trends and segment under/over-performance.  
+  2) Market access summary from payer policy + label docs with **citations**.  
+  3) Talk-to-data: natural-language to SQL over a small commercial star schema.
 - **Responsible AI:** Policy in `contracts/policy.yml` with forbidden topics + PII regex; guard blocks off-label + enforces citations.
 - **Production-readiness:** Tests (`pytest`), lint (`ruff`), CI (GitHub Actions), FastAPI (`/ask`, `/health`), Streamlit UI, Dockerfile.
 - **Data foundations:** Structured (DuckDB views over CSVs) + unstructured (docs/ indexed via FAISS + MiniLM embeddings).
