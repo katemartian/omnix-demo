@@ -40,9 +40,15 @@ docker run --rm -p 8000:8000 omnix:latest
 pytest -q
 ```
 
-## What to demo live (2–3 minutes)
+## Screenshots
 
-- Ask: “Trend last 6 weeks RX in ON” → Dataframe + SQL trace.
-- Ask: “Which HCP segment underperformed vs forecast in Ontario?” → Sort by delta.
-- Ask: “Summarize formulary constraints for Drug X in Ontario” → Snippets + citations.
-- Ask: “Tell me off label use details for this drug” → Blocked by guardrail (explain policy).
+<p align="center">
+  <img src="docs/ui_sql.png" alt="Talk-to-SQL query" width="45%"/>
+  <img src="docs/ui_hcp.png" alt="Underperformance by HCP segment" width="45%"/>
+</p>
+
+<p align="center">
+  <img src="docs/ui_docs.png" alt="Formulary constraints with citations" width="45%"/>
+  <img src="docs/ui_block.png" alt="Guardrail blocking off-label request" width="45%"/>
+</p>
+
