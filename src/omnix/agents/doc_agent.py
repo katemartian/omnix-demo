@@ -3,6 +3,7 @@ from typing import Dict, Any
 from ..rag.index import load_default
 from ..guard.policy import load_policy, forbidden_hit
 from ..guard.filters import redact_pii
+import re
 
 _retriever = None
 _policy = None
@@ -26,6 +27,14 @@ def ask_docs(question: str, k: int = 3) -> Dict[str, Any]:
         return {
             "blocked": True,
             "reason": f"forbidden_topics:{','.join(f_hits)}",
+            "answer": None,
+            "citations": []
+        }
+    # Block explicit PII requests (e.g., "phone numbers")
+    if re.search(r"\b(phone|phone\s*number|contact\s*number|personal\s*number)s?\b", question.lower()):
+        return {
+            "blocked": True,
+            "reason": "pii_request",
             "answer": None,
             "citations": []
         }
