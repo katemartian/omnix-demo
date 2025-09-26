@@ -1,7 +1,13 @@
 def test_imports():
-    import omnix
-    import omnix.agents
-    import omnix.tools
-    import omnix.sql
-    import omnix.rag
-    import omnix.guard
+    modules = [
+        "omnix",
+        "omnix.agents",
+        "omnix.tools",
+        "omnix.sql",
+        "omnix.rag",
+        "omnix.guard",
+        "omnix.api",
+    ]
+
+    for m in modules:
+        __import__(m)
