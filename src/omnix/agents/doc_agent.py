@@ -34,7 +34,7 @@ def ask_docs(question: str, k: int = 3) -> Dict[str, Any]:
     if re.search(r"\boff[\s\-_]*label(\s*use|\s*uses)?\b", question.lower()):
         return {
             "blocked": True,
-            "reason": "off_label_request",
+            "reason": "forbidden_topics:off_label_use",
             "answer": None,
             "citations": []
         }
