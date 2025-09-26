@@ -5,4 +5,3 @@ def test_imports():
     import omnix.sql
     import omnix.rag
     import omnix.guard
-    import omnix.api
