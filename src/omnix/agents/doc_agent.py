@@ -30,6 +30,14 @@ def ask_docs(question: str, k: int = 3) -> Dict[str, Any]:
             "answer": None,
             "citations": []
         }
+    # Block explicit off-label requests, regardless of policy variants
+    if re.search(r"\boff[\s\-_]*label(\s*use|\s*uses)?\b", question.lower()):
+        return {
+            "blocked": True,
+            "reason": "off_label_request",
+            "answer": None,
+            "citations": []
+        }
     # Block explicit PII requests (e.g., "phone numbers")
     if re.search(r"\b(phone|phone\s*number|contact\s*number|personal\s*number)s?\b", question.lower()):
         return {
