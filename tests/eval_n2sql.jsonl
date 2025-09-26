@@ -1,0 +1,15 @@
+{"q": "Trend last 6 weeks RX in ON", "expect_keys": ["year_week","rx"], "min_rows": 3}
+{"q": "Show last 4 weeks RX in QC", "expect_keys": ["year_week","rx"], "min_rows": 3}
+{"q": "Which HCP segment underperformed vs forecast in Ontario?", "expect_keys": ["segment","rx","forecast_rx","delta"], "min_rows": 1}
+{"q": "Which segment underperformed vs forecast?", "expect_keys": ["segment","rx","forecast_rx","delta"], "min_rows": 1}
+{"q": "Flag anomalous districts", "expect_keys": ["district","year_week","rx","z"], "min_rows": 0}
+{"q": "Trend last 8 weeks RX in BC", "expect_keys": ["year_week","rx"], "min_rows": 3}
+{"q": "Trend last 12 weeks RX in ON", "expect_keys": ["year_week","rx"], "min_rows": 6}
+{"q": "Trend last 5 weeks RX in QC", "expect_keys": ["year_week","rx"], "min_rows": 3}
+{"q": "Underperformed segment vs forecast in ON", "expect_keys": ["segment","rx","forecast_rx","delta"], "min_rows": 1}
+{"q": "Which segment is worst vs forecast?", "expect_keys": ["segment","rx","forecast_rx","delta"], "min_rows": 1}
+{"q": "Anomalous districts last weeks", "expect_keys": ["district","year_week","rx","z"], "min_rows": 0}
+{"q": "Show last 10 weeks rx in on", "expect_keys": ["year_week","rx"], "min_rows": 5}
+{"q": "Show last 9 weeks RX in bc", "expect_keys": ["year_week","rx"], "min_rows": 4}
+{"q": "Underperformed by segment (quarter)", "expect_keys": ["segment","rx","forecast_rx","delta"], "min_rows": 1}
+{"q": "Which HCP segment underperformed vs forecast in Quebec?", "expect_keys": ["segment","rx","forecast_rx","delta"], "min_rows": 1}
