@@ -1,7 +1,6 @@
 from __future__ import annotations
 from pathlib import Path
 from typing import List, Dict, Tuple
-import re
 import faiss
 import numpy as np
 
@@ -17,7 +16,7 @@ def _read_docs(doc_dir: Path) -> List[Tuple[str, str]]:
 def _chunk_text(text: str, size: int = _CHUNK_SIZE, overlap: int = _CHUNK_OVERLAP) -> List[str]:
     # simple paragraph-aware chunking
     paras = [p.strip() for p in text.splitlines()]
-    buf, chunks = [], []
+    chunks = []
     cur = ""
     for p in paras:
         if not p:
@@ -78,9 +77,9 @@ class Retriever:
         if not self.corpus:
             return []
         q = _embed([query])
-        D, I = self.index.search(q, min(k, len(self.corpus)))
+        D, idxs = self.index.search(q, min(k, len(self.corpus)))
         out = []
-        for score, idx in zip(D[0], I[0]):
+        for score, idx in zip(D[0], idxs[0]):
             if idx == -1:
                 continue
             c = self.corpus[int(idx)]

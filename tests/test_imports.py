@@ -1,3 +1,8 @@
 def test_imports():
     import omnix
-    import omnix.agents, omnix.tools, omnix.sql, omnix.rag, omnix.guard, omnix.api
+    import omnix.agents
+    import omnix.tools
+    import omnix.sql
+    import omnix.rag
+    import omnix.guard
+    import omnix.api
